@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #a7d4d2;
+    color: #333;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #020b1a;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: #f7f8f8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-box {
+    padding: 8px 12px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f1f6ff;
+}
+
+.search-box:focus {
+    border-color: #1a73e8;
+    background-color: #fff;
+}
+
+#searchBtn {
+    padding: 8px 12px;
+    margin-left: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #218838;
+}
+
+#home {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#home:hover {
+    background-color: #0069d9;
+}
+
+#orderListContainer {
+    margin-top: 20px;
+    display: none;
+}
+
+.order-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.order-table th {
+    font-weight: bold;
+    color: #fff;
+    background: #0f1724;
+    border-radius: 4px;
+}
+
+#noOrdersMessage {
+    text-align: center;
+    font-weight: bold;
+    color: #f00;
+    display: none;
+    margin-top: 20px;
+}
+
+.rincian-vertikal {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 auto 10px auto; /* margin bawah saja */
+    max-width: 600px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* kurangi shadow supaya tidak terlihat menumpuk */
+}
+
+.rincian-vertikal p {
+    margin: 3px 0; /* rapikan jarak antar baris */
+    font-size: 14px;
+}
+
+.rincian-vertikal canvas {
+    display: block;
+    margin: 10px auto 0 auto; /* hanya jarak atas */
+}
+
+
+.rincian-vertikal {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.rincian-vertikal p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.rincian-vertikal canvas {
+    display: block;
+    margin: 10px auto;
+}

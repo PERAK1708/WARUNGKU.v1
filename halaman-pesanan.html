@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat Pesanan</title>
+<link rel="stylesheet" href="riwayat.css">
+</head>
+<body>
+
+<div style="text-align:center; margin-top:20px;">
+    <button id="home" type="button">HOME</button>
+</div>
+
+<h2>Daftar Pesanan Anda</h2>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Cari berdasarkan ID Pesanan atau Nomor Meja" class="search-box">
+  <button id="searchBtn">Cari</button>
+</div>
+
+<div id="orderListContainer">
+  <p id="noOrdersMessage">Tidak ada pesanan yang ditemukan.</p>
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>ID Pesanan</th>
+        <th>Nomor Meja</th>
+        <th>Nama Pemesan</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Metode Pembayaran</th>
+      </tr>
+    </thead>
+    <tbody id="orderList"></tbody>
+  </table>
+</div>
+
+<!-- QRCode CDN -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<script type="module" src="riwayat.js"></script>
+
+</body>
+</html>

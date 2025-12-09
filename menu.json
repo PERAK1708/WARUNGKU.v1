@@ -1,0 +1,64 @@
+[
+  { "id": 1, "name": "Nasi Goreng", "harga": 20000, "img": "https://i.postimg.cc/ZR1RTFYX/download.jpg" },
+  { "id": 2, "name": "Mie Ayam", "harga": 15000, "img": "https://i.postimg.cc/ZR1RTFYX/download.jpg" },
+  { "id": 3, "name": "Sate Ayam", "harga": 25000, "img": "aset/sate_ayam.jpeg" },
+  { "id": 4, "name": "Es Teh", "harga": 5000, "img": "aset/es_teh.jpeg" },
+  { "id": 5, "name": "Ayam Guling", "harga": 25000, "img": "aset/ayam_guling.jpeg" },
+  { "id": 6, "name": "Es Buah", "harga": 8000, "img": "aset/es_buah.jpg" },
+
+  { "id": 7, "name": "Bakso", "harga": 15000, "img": "aset/bakso.jpeg" },
+  { "id": 8, "name": "Soto Ayam", "harga": 14000, "img": "aset/soto_ayam.jpeg" },
+  { "id": 9, "name": "Ayam Geprek", "harga": 16000, "img": "aset/ayam_geprek.jpeg" },
+  { "id": 10, "name": "Nasi Uduk", "harga": 8000, "img": "aset/nasi_uduk.jpeg" },
+
+  { "id": 11, "name": "Nasi Kuning", "harga": 9000, "img": "aset/nasi_kuning.jpeg" },
+  { "id": 12, "name": "Lontong Sayur", "harga": 10000, "img": "aset/lontong_sayur.jpeg" },
+  { "id": 13, "name": "Tahu Crispy", "harga": 8000, "img": "aset/tahu_crispy.jpeg" },
+  { "id": 14, "name": "Kentang Goreng", "harga": 10000, "img": "aset/kentang_goreng.jpeg" },
+  { "id": 15, "name": "Sosis Bakar", "harga": 10000, "img": "aset/sosis_bakar.jpeg" },
+
+  { "id": 16, "name": "Roti Bakar Coklat", "harga": 12000, "img": "aset/roti_bakar_coklat.jpeg" },
+  { "id": 17, "name": "Roti Bakar Keju", "harga": 13000, "img": "aset/roti_bakar_keju.jpeg" },
+  { "id": 18, "name": "Dimsum Ayam", "harga": 13000, "img": "aset/dimsum_ayam.jpeg" },
+  { "id": 19, "name": "Dimsum Udang", "harga": 15000, "img": "aset/dimsum_udang.jpeg" },
+  { "id": 20, "name": "Seblak Original", "harga": 12000, "img": "aset/seblak.jpeg" },
+
+  { "id": 21, "name": "Seblak Ceker", "harga": 15000, "img": "aset/seblak_ceker.jpeg" },
+  { "id": 22, "name": "Mie Goreng", "harga": 10000, "img": "aset/mie_goreng.jpeg" },
+  { "id": 23, "name": "Mie Kuah", "harga": 10000, "img": "aset/mie_kuah.jpeg" },
+  { "id": 24, "name": "Kwetiau Goreng", "harga": 17000, "img": "aset/kwetiau.jpeg" },
+  { "id": 25, "name": "Ayam Bakar", "harga": 18000, "img": "aset/ayam_bakar.jpeg" },
+
+  { "id": 26, "name": "Ayam Goreng", "harga": 17000, "img": "aset/ayam_goreng.jpeg" },
+  { "id": 27, "name": "Ikan Bakar", "harga": 25000, "img": "aset/ikan_bakar.jpeg" },
+  { "id": 28, "name": "Ikan Goreng", "harga": 23000, "img": "aset/ikan_goreng.jpeg" },
+  { "id": 29, "name": "Rawon", "harga": 25000, "img": "aset/rawon.jpeg" },
+  { "id": 30, "name": "Rendang", "harga": 30000, "img": "aset/rendang.jpeg" },
+
+  { "id": 31, "name": "Gado-Gado", "harga": 12000, "img": "aset/gado_gado.jpeg" },
+  { "id": 32, "name": "Pempek", "harga": 15000, "img": "aset/pempek.jpeg" },
+  { "id": 33, "name": "Bubur Ayam", "harga": 9000, "img": "aset/bubur_ayam.jpeg" },
+  { "id": 34, "name": "Nasi Campur", "harga": 12000, "img": "aset/nasi_campur.jpeg" },
+  { "id": 35, "name": "Nasi Padang", "harga": 18000, "img": "aset/nasi_padang.jpeg" },
+
+  { "id": 36, "name": "Es Jeruk", "harga": 6000, "img": "aset/es_jeruk.jpeg" },
+  { "id": 37, "name": "Es Lemon Tea", "harga": 7000, "img": "aset/es_lemontea.jpeg" },
+  { "id": 38, "name": "Es Kopi Susu", "harga": 12000, "img": "aset/kopi_susu.jpeg" },
+  { "id": 39, "name": "Cappuccino", "harga": 15000, "img": "aset/cappuccino.jpeg" },
+  { "id": 40, "name": "Latte", "harga": 16000, "img": "aset/latte.jpeg" },
+
+  { "id": 41, "name": "Matcha Latte", "harga": 17000, "img": "aset/matcha_latte.jpeg" },
+  { "id": 42, "name": "Coklat Panas", "harga": 15000, "img": "aset/coklat_panas.jpeg" },
+  { "id": 43, "name": "Milkshake Coklat", "harga": 14000, "img": "aset/milkshake_coklat.jpeg" },
+  { "id": 44, "name": "Milkshake Vanilla", "harga": 14000, "img": "aset/milkshake_vanilla.jpeg" },
+  { "id": 45, "name": "Milkshake Strawberry", "harga": 14000, "img": "aset/milkshake_strawberry.jpeg" },
+
+  { "id": 46, "name": "Air Mineral", "harga": 4000, "img": "aset/air_mineral.jpeg" },
+  { "id": 47, "name": "Lemonade", "harga": 9000, "img": "aset/lemonade.jpeg" },
+  { "id": 48, "name": "Thai Tea", "harga": 13000, "img": "aset/thai_tea.jpeg" },
+  { "id": 49, "name": "Teh Tarik", "harga": 12000, "img": "aset/teh_tarik.jpeg" },
+  { "id": 50, "name": "Es Kelapa Muda", "harga": 10000, "img": "aset/es_kelapa.jpeg" },
+  { "id": 51, "name": "Teh Tarik", "harga": 12000, "img": "aset/teh_tarik.jpeg" },
+  { "id": 52, "name": "Es Kelapa Muda", "harga": 10000, "img": "aset/es_kelapa.jpeg" }
+]
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Menu Pemesanan</title>
+<link rel="stylesheet" href="fail.css">
+</head>
+<body>
+<div style="text-align:center; margin-top:20px;">
+    <button id="lihatPesananBtn" type="button">Lihat Pesanan Saya</button>
+</div>
+
+<h2>Daftar Menu Pemesanan</h2>
+
+<div class="menu-rincian-container">
+
+    <!-- MENU -->
+    <div class="menu-section">
+        <h3>Menu Pilihan</h3>
+        <input type="text" id="searchMenu" placeholder="🔍 Cari menu..." class="search-box">
+        <div id="menuGrid" class="menu-grid"></div>
+    </div>
+
+    <!-- FORM -->
+    <form id="orderForm">
+        <div class="form-box">
+            <div class="form-title">Data Pemesan</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nomor Meja</label>
+                    <input type="number" name="nomorMeja" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Nama Pemesan</label>
+                    <input type="text" name="namaPemesan" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Metode Pembayaran</label>
+                <select name="pembayaran" required>
+                    <option value="">Pilih Metode</option>
+                    <option value="Cash">TUNAI</option>
+                    <option value="Debit">TRANSFER/Debit</option>
+                    <option value="QRIS">QRIS</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- RINCIAN -->
+        <div class="rincian-pesanan">
+            <h3>Rincian Pesanan</h3>
+            <table class="tabel-rincian">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Menu</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="rincianList"></tbody>
+            </table>
+            <div class="total-bayar">
+                <label>Total Bayar : Rp</label>
+                <input type="text" id="total" name="total" readonly value="0">
+            </div>
+        </div>
+
+        <button type="submit">BUAT PESANAN</button>
+      </div>
+</form>
+
+
+
+
+
+<!-- Modal Konfirmasi -->
+<div id="rincianModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Konfirmasi Pesanan</h3>
+            <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Menu</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="modalRincian"></tbody>
+            </table>
+            <p style="text-align:right; font-weight:bold; margin-top:10px;">
+                Total: Rp <span id="modalTotal">0</span>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button id="confirmOrderBtn">Konfirmasi & Bayar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pembayaran -->
+<!-- Modal Pembayaran & Status -->
+<div id="paymentModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Pembayaran & Status Pesanan</h3>
+      <span class="close-payment-modal">&times;</span>
+    </div>
+    <div class="modal-body" id="paymentContent">
+      <p><strong>Nomor Meja:</strong> <span id="payNomorMeja"></span></p>
+      <p><strong>Total Bayar:</strong> Rp <span id="payTotal"></span></p>
+      <p><strong>Metode Pembayaran:</strong> <span id="payMetode"></span></p>
+      <div id="payInstruksi"></div>
+      <canvas id="payQRIS" style="display:none;"></canvas>
+      <p><strong>Status:</strong> <span id="payStatus">Sedang dalam antrian</span></p>
+    </div>
+    <div class="modal-footer">
+      <button id="closePaymentBtn">Tutup</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script src="firebase.js"></script>
+<script type="module" src="fail.js"></script>
+
+</body>
+</html>

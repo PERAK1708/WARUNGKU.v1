@@ -1,0 +1,544 @@
+/* ===== Base ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 20px;
+    background: #f1af57;
+    color: #333;
+}
+
+h2, h3 {
+    background: #15ebc7;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #020b1a;
+    font-weight: 600;
+}
+
+/* ===== Container ===== */
+.menu-rincian-container {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* ===== Menu Section ===== */
+.menu-section {
+    flex: 1 1 60%;
+    background: #d1f3b1;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(92, 28, 28, 0.15);
+    border: 2px solid #010a1a;
+
+    max-height: 85vh;   /* tinggi batas */
+    overflow-y: auto;   /* scroll vertikal */
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: #e3e6e9;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #bcd8ff;
+    transition: 0.25s ease;
+}
+
+.menu-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+}
+
+.menu-item .nama {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.menu-item .harga {
+    color: #007bff;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.menu-item button {
+    background: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu-item button:hover {
+    background: #005ec4;
+}
+
+/* ===== Qty Control ===== */
+.qty-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.qty-control button {
+    padding: 4px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.qty-control .tambah {
+    background: #28a745;
+}
+
+.qty-control .kurang {
+    background: #dc3545;
+}
+
+.qty-control button:hover {
+    opacity: 0.8;
+}
+
+.qty-input {
+    width: 45px;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+/* ===== Rincian Pesanan ===== */
+.rincian-pesanan {
+    flex: 1 1 40%;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.tabel-rincian {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabel-rincian th {
+    background: #0b2a61;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.tabel-rincian td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* ===== Total & QRIS ===== */
+.total-bayar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-bayar input {
+    width: 150px;
+    font-size: 20px;
+    padding: 8px;
+    border: 2px solid #0b2a61;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.qris-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qris-container canvas {
+    width: 200px;
+    height: 200px;
+}
+
+/* ===== Submit Button ===== */
+button[type="submit"] {
+    width: 200px;
+    padding: 12px;
+    background: #0b2a61;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    display: block;
+    margin: 25px auto 0 auto;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s ease;
+}
+button[type="submit"]:hover {
+    background: #0e3d99;
+}
+
+/* ===== Search Box ===== */
+/* ===== Search Box ===== */
+.search-box {
+    width: 80%; /* Lebar tidak penuh, hanya 80% dari kontainer */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #0b2a61;
+    outline: none;
+    transition: 0.3s ease;
+    margin: 10px auto;  /* Menjaga agar tetap di tengah */
+    background: #85a6e2; /* Latar belakang berwarna */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sedikit bayangan */
+}
+
+/* Focus effect ketika pencarian diklik */
+.search-box:focus {
+    border-color: #1a73e8;
+    background: white;
+    box-shadow: 0 0 8px rgba(30, 100, 200, 0.3);
+}
+
+
+/* ===== Modal ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.close-modal {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modal-body table th,
+.modal-body table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.modal-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .menu-rincian-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 15px;
+    }
+
+    .menu-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nama, .harga {
+        font-size: 14px;
+    }
+
+    .qty-input {
+        width: 45px;
+        font-size: 16px;
+    }
+
+    .total-bayar input {
+        width: 130px;
+        font-size: 18px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .menu-item img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .qty-control button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .qty-input {
+        width: 40px;
+        font-size: 14px;
+    }
+}
+
+/* ===== Form Styling ===== */
+.order-table input, 
+.order-table select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 2px solid #0b2a61;
+    outline: none;
+    font-size: 16px;
+}
+
+.order-table input:focus,
+.order-table select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 6px rgba(30, 100, 200, 0.3);
+}
+
+.order-table th {
+    background: #0b2a61;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+/* Styling input tanggal & jam */
+#tanggalJam {
+    width: 100%; /* Lebar penuh */
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #0b2a61;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* agar padding tidak memecah lebar */
+    background-color: #f1f6ff;
+    color: #020b1a;
+    overflow-x: auto; /* scroll horizontal jika panjang */
+}
+/* Sticky Header Menu */
+.menu-section h3,
+.search-box {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+/* Tambah background agar tidak transparan saat sticky */
+/* Sticky Judul Menu */
+.menu-section h3 {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: #d1f3b1;
+    padding: 10px 0;
+}
+
+/* Sticky Search Box di bawah Judul */
+.search-box {
+    position: sticky;
+    top: 55px; /* posisi di bawah judul */
+    z-index: 25;
+    background: #d1f3b1;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #0b2a61;
+}
+
+/* ==== FORM BOX ==== */
+.form-box {
+    background: #ffffff;
+    border: 3px solid #0b2a61;
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Judul */
+.form-title {
+    background: #0b2a61;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Setiap baris form */
+.form-group {
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label */
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b2a61;
+}
+
+/* ==== FORM BOX ==== */
+.form-box {
+    background: #ffffff;
+    border: 3px solid #0b2a61;
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards; /* Animasi fade-in */
+}
+
+/* Animasi form muncul dari atas */
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Judul */
+.form-title {
+    background: #0b2a61;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Baris Form */
+.form-row {
+    display: flex;
+    gap: 20px; /* ruang antar kolom */
+    padding: 14px 18px;
+}
+
+/* Setiap kolom dalam form */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label */
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b2a61;
+}
+
+/* Input & Select */
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    background: #f1f6ff;
+    border: 2px solid #0b2a61;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Fokus input/select */
+.form-group input:focus,
+.form-group select:focus {
+    background: #ffffff;
+    border-color: #1a73e8;
+    box-shadow: 0 0 6px rgba(30, 100, 200, 0.3);
+}
+/* Hapus spinner dari input type number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#lihatPesananBtn {
+    padding: 12px 25px;
+    background: #0b2a61;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#lihatPesananBtn:hover {
+    background: #0e3d99;
+}

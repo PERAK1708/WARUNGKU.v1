@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halaman Kasir</title>
+  <link rel="stylesheet" href="kasir.css" />
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="kasir.js"></script>
+</head>
+<body>
+  <h2>Pesanan Masuk</h2>
+
+  <table id="orderList">
+    <thead>
+      <tr>
+        <th>Nomor Meja</th>
+        <th>Nama Pemesan</th>
+        <th>Metode Pembayaran</th>
+        <th>Rincian Pesanan</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="orders"></tbody>
+  </table>
+</body>
+</html>

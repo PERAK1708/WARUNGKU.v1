@@ -20,19 +20,3 @@ const db = getDatabase(app);
 
 // Ekspor objek db agar bisa digunakan di file lain
 export { db };
-async function isTableAvailable(nomorMeja) {
-    const ordersRef = ref(db, 'pesanan');
-    try {
-        const snapshot = await get(ordersRef);
-        if(snapshot.exists()) {
-            const orders = snapshot.val();
-            // Cek apakah ada pesanan yang nomor mejanya sama
-            const isTaken = Object.values(orders).some(order => order.nomorMeja === nomorMeja);
-            return !isTaken; // true jika tersedia, false jika sudah terpakai
-        }
-        return true; // jika belum ada pesanan sama sekali, tersedia
-    } catch (error) {
-        console.error("Error checking table availability:", error);
-        return false; // aman default false agar tidak lanjut
-    }
-}

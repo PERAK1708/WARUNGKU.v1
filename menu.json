@@ -1,8 +1,8 @@
 [
   { "id": 1, "name": "Nasi Goreng", "harga": 20000, "img": "https://i.postimg.cc/ZR1RTFYX/download.jpg" },
   { "id": 2, "name": "Mie Ayam", "harga": 15000, "img": "https://i.postimg.cc/ZR1RTFYX/download.jpg" },
-  { "id": 3, "name": "Sate Ayam", "harga": 25000, "img": "aset/sate_ayam.jpeg" },
-  { "id": 4, "name": "Es Teh", "harga": 5000, "img": "aset/es_teh.jpeg" },
+  { "id": 3, "name": "Sate Ayam", "harga": 25000, "img": "https://i.postimg.cc/gj80rXrM/SAY.jpg" },
+  { "id": 4, "name": "Es Teh", "harga": 5000, "img": "https://i.postimg.cc/L5LshYhx/ST.jpg" },
   { "id": 5, "name": "Ayam Guling", "harga": 25000, "img": "aset/ayam_guling.jpeg" },
   { "id": 6, "name": "Es Buah", "harga": 8000, "img": "aset/es_buah.jpg" },
 
@@ -61,4 +61,5 @@
   { "id": 51, "name": "Teh Tarik", "harga": 12000, "img": "aset/teh_tarik.jpeg" },
   { "id": 52, "name": "Es Kelapa Muda", "harga": 10000, "img": "aset/es_kelapa.jpeg" }
 ]
+
 
